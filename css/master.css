@@ -9,8 +9,8 @@
   }
 
   .container{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
     
@@ -19,6 +19,8 @@
   
 .header {
     padding: 10px;
+    border-bottom:1px solid #c5c4c4;
+
 }
 
 .header .container {
@@ -26,6 +28,7 @@
     justify-content: space-between;
     align-items: center; 
     position: relative;
+    
 }
 
 .logo1{
@@ -40,8 +43,13 @@
     position: absolute;
     right: 0;
     min-width: 200px;
+    display: none;
    
     
+}
+.header .links:hover ul{
+  display: block;
+  transition: .5s;
 }
  .header .links ul::before{ 
     position: absolute;
@@ -62,14 +70,38 @@
     text-align: center;
     color: #333;
     
-    
-}
+    }
+
+    .header .links ul li:not(:last-child) a {
+      
+      border-bottom: 1px solid lightgreen;
+
+    }
+
+    .header .links ul li a:hover{
+      padding-left: 25px;
+      
+  }
+/* end of header and start of landing */
+
+.landing{
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  justify-content: center;
+  width: 60%;
+  height: 400px;
+  background-color: lightgreen;
+  border-style: solid;
+  border-color: lightgreen;
+  border : 1px;
+  border-radius: 2%;
+ position: relative;
+ top: 60px;
 
 
-.header .links ul li a:hover{
-    padding-left: 25px;
-    
 }
+
 
   @media (min-width:768px) {
     .container{
@@ -88,6 +120,20 @@
   @media (min-width:1200px) {
     .container{
         width: 1170px;
+    }
+    
+  }
+
+  @media (min-width:1500px) {
+    .container{
+        width: 1470px;
+    }
+    
+  }
+
+  @media (min-width:1900) {
+    .container{
+        width: 1870px;
     }
     
   }
